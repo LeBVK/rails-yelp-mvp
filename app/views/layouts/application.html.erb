@@ -11,6 +11,23 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="navbar-wagon">
+      <!-- Logo -->
+      <%= link_to restaurants_path, class: "navbar-wagon-brand" do %>
+        <%= image_tag "logo.png", height: 50 %>
+      <% end %>
+
+      <!-- Right Navigation -->
+      <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+        <!-- Links -->
+        <%= link_to "All restaurants", restaurants_path, class: "navbar-wagon-item navbar-wagon-link" %>
+        <%= link_to "Add a restaurant", new_restaurant_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      </div>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,8 @@
+<%= simple_form_for [restaurant] do |f| %>
+
+    <%= f.input :name, error: 'Name is mandatory' %>
+    <%= f.input :address, error: 'Address is mandatory' %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, error: 'Must be included in categories displayed' %>
+    <%= f.submit class: "btn btn-success" %>
+  <% end %>
